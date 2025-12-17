@@ -16,6 +16,9 @@ export class DiscordService {
     }
 
     async send(type: string, payload: PayloadDto) {
+        if (type === 'ping') {
+            return ''
+        }
         await this.httpClientService.request({
             method: 'post',
             url: this.configService.get('DISCORD_HOOKS_URL'),
