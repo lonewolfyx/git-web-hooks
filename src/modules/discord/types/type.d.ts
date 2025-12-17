@@ -1,7 +1,3 @@
-export interface MessageHandler {
-    handle(data: unknown): object
-}
-
 export interface IPayload {
     action: string
     starred_at: string
@@ -21,6 +17,10 @@ export interface IPayload {
         avatar_url: string
         html_url: string
     }
+}
+
+export interface MessageHandler {
+    handle(data: IPayload): object
 }
 
 export interface IHandleMessage {
