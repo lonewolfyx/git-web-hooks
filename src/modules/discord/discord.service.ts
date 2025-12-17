@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common'
-import { PayloadDto } from './dto/payload.dto'
 import { DiscordDispatcher } from './observer/discord.observer'
-import { StarHandler } from './observer/star.handler'
+import { GithubStarHandler } from './observer/github.star.handler'
 import { ConfigService } from '@nestjs/config'
 import { HttpClientService } from '../../common/module/http-client.service'
 import { isObject } from '@nestjs/common/utils/shared.utils'
+import { IGithubPayload, IGithubType } from '../../shared/github'
 
 @Injectable()
 export class DiscordService {
@@ -13,10 +13,10 @@ export class DiscordService {
         private readonly dispatcher: DiscordDispatcher,
         private readonly configService: ConfigService
     ) {
-        this.dispatcher.registry('star', new StarHandler())
+        this.dispatcher.registry('star', new GithubStarHandler())
     }
 
-    async send(type: string, payload: PayloadDto) {
+    async send(type: IGithubType, payload: IGithubPayload) {
         if (type === 'ping') {
             return ''
         }

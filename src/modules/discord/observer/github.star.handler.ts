@@ -1,7 +1,8 @@
-import { IPayload, MessageHandler } from '../types/type'
+import { MessageHandler } from '../types/type'
+import { IGithubPayload } from '../../../shared/github'
 
-export class StarHandler implements MessageHandler {
-    handle(data: IPayload) {
+export class GithubStarHandler implements MessageHandler {
+    handle(data: IGithubPayload) {
         if (data.action !== 'created') {
             return {}
         }

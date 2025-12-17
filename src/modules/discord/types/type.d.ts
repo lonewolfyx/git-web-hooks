@@ -1,29 +1,10 @@
-export interface IPayload {
-    action: string
-    starred_at: string
-    repository?: {
-        name: string
-        full_name: string
-        html_url: string
-        fork: boolean
-    }
-    organization?: {
-        login: string
-        avatar_url: string
-        description: string
-    }
-    sender?: {
-        login: string
-        avatar_url: string
-        html_url: string
-    }
-}
+import { IGithubPayload } from '../../../shared/github'
 
 export interface MessageHandler {
-    handle(data: IPayload): object
+    handle(data: IGithubPayload): object
 }
 
 export interface IHandleMessage {
     type: string
-    data: IPayload
+    data: IGithubPayload
 }

@@ -1,5 +1,7 @@
+import { IGithubAction } from '../../../shared/github'
+
 export class PayloadDto {
-    action: string
+    action: IGithubAction
     starred_at: string
     repository?: {
         name: string
