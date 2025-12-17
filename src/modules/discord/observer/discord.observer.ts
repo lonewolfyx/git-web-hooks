@@ -25,7 +25,7 @@ export class DiscordDispatcher {
         const { type, data } = message
         const handlers = this.handlers.get(type) || []
         if (!handlers.length) {
-            return
+            return null
         }
 
         const results = handlers.map((handler) => handler.handle(data))
