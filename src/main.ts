@@ -11,7 +11,7 @@ async function bootstrap() {
 
     const config = new DocumentBuilder().setTitle('Github Web Hooks').setDescription('').setVersion(version).build()
     const documentFactory = () => SwaggerModule.createDocument(app, config)
-    SwaggerModule.setup('api', app, documentFactory, {
+    SwaggerModule.setup('/', app, documentFactory, {
         jsonDocumentUrl: 'api/json',
         swaggerOptions: {
             showExtensions: true
