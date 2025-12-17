@@ -2,7 +2,9 @@
     <img src="public/logo.svg" width="120" alt="git web hooks" />
 </p>
 
-# Git Web Hooks
+<h1 align="center">
+    Git Web Hooks
+</h1>
 
 A lightweight Git Web Hook wrapper for receiving GitHub webhook payloads and sending them to various supported
 platforms.
