@@ -1,10 +1,10 @@
 {
-    "name": "hooks",
-    "version": "0.0.1",
-    "description": "",
-    "author": "",
+    "name": "git-web-hooks",
+    "version": "0.0.0",
+    "description": "Lightweight Git Web Hooks wrapper, currently only supports Discord",
+    "author": "lonewolfyx <olddrivero.king@qq.com>",
     "private": true,
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -80,5 +80,6 @@
     },
     "lint-staged": {
         "*": "eslint --fix"
-    }
+    },
+    "packageManager": "pnpm@10.15.1"
 }
