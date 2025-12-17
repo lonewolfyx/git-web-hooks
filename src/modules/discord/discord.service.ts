@@ -3,7 +3,7 @@ import { PayloadDto } from './dto/payload.dto'
 import { DiscordDispatcher } from './observer/discord.observer'
 import { StarHandler } from './observer/star.handler'
 import { ConfigService } from '@nestjs/config'
-import { HttpClientService } from '../module/http-client.service'
+import { HttpClientService } from '../../common/module/http-client.service'
 
 @Injectable()
 export class DiscordService {
