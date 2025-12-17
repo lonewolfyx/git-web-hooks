@@ -26,7 +26,7 @@ export class DiscordService {
             data: payload
         })
 
-        if (!Object.keys(isObject(content)).length || !content) {
+        if (isObject(content) ? !Object.keys(content).length : false) {
             return ''
         }
 
